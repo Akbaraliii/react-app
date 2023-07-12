@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 import styles from "./Movie.module.css";
 
 function Movie({ id, title, year, medium_cover_image, summary, genres }) {
@@ -9,7 +8,7 @@ function Movie({ id, title, year, medium_cover_image, summary, genres }) {
       <img src={medium_cover_image} alt={title} className={styles.movie__img} />
       <div>
         <h2 className={styles.movie__title}>
-          <Link to='/detail'>{title}</Link>
+          <Link to={`/detail/${id}`}>{title}</Link>
         </h2>
         <h3 className={styles.movie__year}>{year}</h3>
 
